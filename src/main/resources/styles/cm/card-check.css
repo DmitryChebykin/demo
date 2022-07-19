@@ -1,0 +1,6 @@
+@import "root.css";
+
+.btn-cancel{
+    -fx-font-size: 36;
+    -fx-font-weight: bold;
+}

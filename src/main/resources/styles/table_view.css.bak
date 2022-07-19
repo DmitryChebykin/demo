@@ -1,0 +1,7 @@
+.table-view .column-header{
+    -fx-text-fill: -fx-selection-bar-text;
+    -fx-font-size: 20;
+    -fx-font-family: "Arial";
+	-fx-font-color: "red";
+	
+}

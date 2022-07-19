@@ -1,0 +1,111 @@
+@font-face {
+    src: url("/fonts/Raleway-Medium.ttf");
+}
+
+@font-face {
+    src: url("/fonts/ProximaNova-Bold.ttf");
+}
+
+.background-pane {
+    -fx-background-color: #ecfde3;
+}
+
+.pane-container-white {
+    -fx-effect: dropshadow(one-pass-box, #64b09a, 8, 0, 1, 2);
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+    -fx-font-family: 'Raleway';
+    -fx-font-weight: bold;
+    -fx-font-size: 46px;
+}
+
+.button-denied {
+    -fx-border-color: #10b5d1;
+    -fx-border-width: 4px;
+    -fx-border-radius: 30;
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+    -fx-background-insets: 4;
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 24px;
+}
+
+.button-input {
+    -fx-background-color: #99d170;
+    -fx-background-radius: 20;
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 28px;
+}
+
+.pane-pagination {
+    -fx-background-color: linear-gradient(to bottom right, #84ca74, #6fbfa2);
+    -fx-background-radius: 0 0 50 50;
+    -fx-background-insets: 0 0 81 0;
+}
+
+.pagination > .pagination-control {
+    -fx-background-color: linear-gradient(to bottom right, #84ca74, #6fbfa2);
+    -fx-background-insets: 0 380 0 380;
+    -fx-background-radius: 0 0 20 20;
+}
+
+/* Remove spacing */
+.pagination > .pagination-control > .control-box {
+    -fx-spacing: 20;
+}
+
+/* You can control the actual button sizes here */
+.pagination > .pagination-control > .control-box > .number-button,
+.pagination > .pagination-control > .control-box > .number-button:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+}
+
+.pagination > .pagination-control > .control-box > .bullet-button,
+.pagination > .pagination-control > .control-box > .bullet-button:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.pagination > .pagination-control > .control-box > .left-arrow-button,
+.pagination > .pagination-control > .control-box > .left-arrow-button:selected,
+.pagination > .pagination-control > .control-box > .left-arrow-button:hover,
+.pagination > .pagination-control > .control-box > .right-arrow-button,
+.pagination > .pagination-control > .control-box > .right-arrow-button:selected,
+.pagination > .pagination-control > .control-box > .right-arrow-button:hover {
+    -fx-effect: dropshadow(one-pass-box, #64b09a, 30, 0, 5, 5);
+    -fx-background-color: #99d170;
+    -fx-background-radius: 20;
+    -fx-min-width: 64;
+    -fx-min-height: 58;
+    -fx-font-size: 36px;
+}
+
+.pagination > .pagination-control .left-arrow {
+    -fx-background-color: white;
+    -fx-background-insets: 0 0 0 -10;
+    -fx-shape: "M 0 0 L -13 7 L 0 13 z";
+    -fx-scale-shape: true;
+}
+
+.pagination > .pagination-control .right-arrow {
+    -fx-background-color: white;
+    -fx-background-insets: 0 -10 0 0;
+    -fx-shape: "M 0 0 L 13 7 L 0 13 z";
+    -fx-scale-shape: true;
+}
+
+.pagination > .pagination-control > .page-information {
+    -fx-padding: -52 0 26 0;
+    -fx-font-family: 'Proxima Nova Rg';
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+}
+
+.workflow-tile {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+}

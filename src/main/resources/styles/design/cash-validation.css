@@ -1,0 +1,71 @@
+@font-face {
+    src: url("/fonts/Raleway-ExtraBold.ttf");
+}
+
+@font-face {
+    src: url("/fonts/Raleway-Medium.ttf");
+}
+
+@font-face {
+    src: url("/fonts/ProximaNova-Bold.ttf");
+}
+
+@font-face {
+    src: url("/fonts/ProximaNova-Light.ttf");
+}
+
+.pane-container-white {
+    -fx-effect: dropshadow(one-pass-box, #519781, 40, 0, 5, 5);
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+}
+
+.button-accept {
+    -fx-effect: dropshadow(three-pass-box, #64b09a, 30, 0, 5, 5);
+    -fx-background-color: radial-gradient(center 50% 50% , radius 60% , #10b5d1, #49d5d4);
+    -fx-background-radius: 30;
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 36px;
+}
+
+.label-header-medium {
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 70px;
+}
+
+.label-header-bold {
+    -fx-font-family: 'Raleway';
+    -fx-font-weight: bold;
+    -fx-font-size: 70px;
+}
+
+.label-cash-in {
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 28px;
+}
+
+.label-cash-in-bold {
+    -fx-font-family: 'Proxima Nova Rg';
+    -fx-font-size: 72px;
+}
+
+.label-cash-odd-header {
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 28px;
+}
+
+.label-cash-odd {
+    -fx-font-family: 'Proxima Nova Lt';
+    -fx-font-size: 36px;
+}
+
+.label-cash-sum-header {
+    -fx-font-family: 'Raleway';
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+}
+
+.label-cash-sum {
+    -fx-font-family: 'Proxima Nova Rg';
+    -fx-font-size: 36px;
+}

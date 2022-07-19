@@ -1,0 +1,70 @@
+@font-face {
+    src: url("/fonts/Raleway-ExtraBold.ttf");
+}
+
+@font-face {
+    src: url("/fonts/Raleway-Medium.ttf");
+}
+
+@font-face {
+    src: url("/fonts/ProximaNova-Bold.ttf");
+}
+
+.label-input-field {
+    -fx-font-family: 'Proxima Nova Rg';
+    -fx-font-size: 56px;
+}
+
+.label-sum-amount {
+    -fx-font-family: 'Proxima Nova Rg';
+    -fx-font-size: 42px;
+}
+
+.label-header {
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 42px;
+}
+
+.label-description {
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 20px;
+}
+
+.input-pane {
+    -fx-effect: dropshadow(one-pass-box, #64b09a, 10, 0, 1, 2);
+}
+
+.pane-container-white {
+    -fx-background-color: white;
+    -fx-background-radius: 50;
+}
+
+.button-number-green {
+    -fx-background-color: #8ecc61;
+    -fx-background-radius: 30;
+}
+
+.button-number-green:pressed {
+    -fx-background-color: #89c660;
+    -fx-background-radius: 30;
+}
+
+.button-number-white {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-background-radius: 30;
+}
+
+.button-accept {
+    -fx-effect: dropshadow(one-pass-box, #64b09a, 10, 0, 1, 2);
+    -fx-background-color: radial-gradient(center 50% 50% , radius 60% , #10b5d1, #49d5d4);
+    -fx-background-radius: 30;
+}
+
+.button-denied {
+    -fx-border-color: #10b5d1;
+    -fx-border-width: 4px;
+    -fx-border-radius: 30;
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+    -fx-background-insets: 4;
+}

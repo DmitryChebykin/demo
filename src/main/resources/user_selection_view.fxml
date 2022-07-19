@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0"
+            prefWidth="1024.0"
+            stylesheets="@styles/design/root.css, @styles/design/users.css, @styles/roots/dialogs.css, @styles/design/user-accept.css"
+            fx:controller="com.example.demo.controller.UserListController">
+
+    <center>
+        <StackPane cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                   minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="30.0"/>
+            </BorderPane.margin>
+            <Pane cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" styleClass="pane-container-green">
+                <VBox fx:id="userContainer" alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+                      maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0"
+                      prefWidth="900.0">
+                    <Label fx:id="searchLabel" alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+                           maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0"
+                           prefWidth="640.0" styleClass="pane-simple-white" text="ФАМИЛИЯ" textAlignment="CENTER">
+                        <VBox.margin>
+                            <Insets bottom="5.0" top="5.0"/>
+                        </VBox.margin>
+                        <font>
+                            <Font size="19.0"/>
+                        </font>
+                    </Label>
+                    <Label fx:id="labHeader" alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+                           maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0"
+                           prefWidth="400.0" text="Выберите оператора КСО" textAlignment="CENTER">
+                        <font>
+                            <Font name="System Bold" size="19.0"/>
+                        </font>
+                    </Label>
+                    <ListView fx:id="userListView" cache="true" cacheHint="SPEED" focusTraversable="false"
+                              maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                              onKeyPressed="#onKeyPressed" onMouseClicked="#onMouseClick" prefHeight="340.0"
+                              prefWidth="640.0" styleClass="pane-simple-white">
+                        <VBox.margin>
+                            <Insets bottom="10.0"/>
+                        </VBox.margin>
+                    </ListView>
+                    <HBox alignment="CENTER" cache="true" cacheHint="SPEED" spacing="10.0">
+                        <padding>
+                            <Insets bottom="5.0"/>
+                        </padding>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="Й" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="Ц" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="У" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="К" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="Е" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="Н" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="Г" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="Ш" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="Щ" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="З" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="Х" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                        <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                focusTraversable="false" layoutX="676.0" layoutY="10.0" maxHeight="-Infinity"
+                                maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                styleClass="button-input" text="Ъ" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                            </padding>
+                        </Button>
+                    </HBox>
+                    <HBox alignment="CENTER" cache="true" cacheHint="SPEED" spacing="10.0">
+                        <children>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Ф" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Ы" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="В" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="А" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="П" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Р" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="О" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Л" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Д" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Ж" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Э" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                        </children>
+                        <padding>
+                            <Insets bottom="5.0"/>
+                        </padding>
+                    </HBox>
+                    <HBox alignment="CENTER" cache="true" cacheHint="SPEED" spacing="10.0">
+                        <children>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Я" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Ч" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button alignment="CENTER" cache="true" cacheHint="SPEED" focusTraversable="false"
+                                    maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" mnemonicParsing="false" onAction="#letterButtonOnAction"
+                                    prefHeight="36.0" prefWidth="36.0" styleClass="button-input" text="С"
+                                    textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button alignment="CENTER" cache="true" cacheHint="SPEED" focusTraversable="false"
+                                    maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" mnemonicParsing="false" onAction="#letterButtonOnAction"
+                                    prefHeight="36.0" prefWidth="36.0" styleClass="button-input" text="М"
+                                    textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="И" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Т" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Ь" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Б" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button id="button-input" alignment="CENTER" cache="true" cacheHint="SPEED"
+                                    focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#letterButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" text="Ю" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button alignment="CENTER" cache="true" cacheHint="SPEED" focusTraversable="false"
+                                    layoutX="474.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#btnClearOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <graphic>
+                                    <ImageView cache="true" cacheHint="SPEED" fitHeight="24.0" fitWidth="24.0"
+                                               pickOnBounds="true" preserveRatio="true">
+                                        <effect>
+                                            <ColorAdjust brightness="-1.0"/>
+                                        </effect>
+                                        <Image url="@gfx/design/cross.png"/>
+                                    </ImageView>
+                                </graphic>
+                                <HBox.margin>
+                                    <Insets/>
+                                </HBox.margin>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                            <Button alignment="CENTER" cache="true" cacheHint="SPEED" focusTraversable="false"
+                                    layoutX="649.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                                    minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                                    onAction="#backspaceButtonOnAction" prefHeight="36.0" prefWidth="36.0"
+                                    styleClass="button-input" textAlignment="CENTER">
+                                <font>
+                                    <Font name="System Bold" size="14.0"/>
+                                </font>
+                                <graphic>
+                                    <ImageView cache="true" cacheHint="SPEED" fitHeight="24.0" fitWidth="24.0"
+                                               pickOnBounds="true">
+                                        <effect>
+                                            <ColorAdjust brightness="-1.0"/>
+                                        </effect>
+                                        <image>
+                                            <Image url="@gfx/design/backspace-back-arrow-backspace-symbol-png-transparent-png.png"/>
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                                <padding>
+                                    <Insets bottom="-5.0" left="-5.0" right="-5.0" top="-5.0"/>
+                                </padding>
+                            </Button>
+                        </children>
+                        <padding>
+                            <Insets bottom="5.0"/>
+                        </padding>
+                    </HBox>
+                </VBox>
+            </Pane>
+            <VBox fx:id="vboxAttention" alignment="CENTER" cache="true" cacheHint="SPEED" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0">
+                <Pane cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" styleClass="pane-container-purple">
+                    <VBox alignment="BOTTOM_CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+                          maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0"
+                          prefWidth="900.0">
+                        <padding>
+                            <Insets bottom="50.0" top="50.0"/>
+                        </padding>
+                        <ImageView cache="true" cacheHint="SPEED" fitHeight="167.0" fitWidth="167.0" opacity="0.7"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <Image url="@gfx/design/cross.png"/>
+                        </ImageView>
+                        <Label fx:id="labMessage" alignment="BOTTOM_LEFT" cache="true" cacheHint="SPEED"
+                               minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="640.0"
+                               styleClass="label-attention-medium" text="Извините,&#10;касса временно" textFill="WHITE">
+                            <font>
+                                <Font name="Ubuntu" size="82.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="labMessage1" alignment="BOTTOM_LEFT" cache="true" cacheHint="SPEED"
+                               layoutX="110.0" layoutY="450.0" minHeight="-Infinity" minWidth="-Infinity"
+                               prefHeight="130.0" prefWidth="640.0" styleClass="label-attention-bold" text="не работает"
+                               textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="Ubuntu Bold" size="103.0"/>
+                            </font>
+                        </Label>
+                    </VBox>
+                </Pane>
+            </VBox>
+        </StackPane>
+    </center>
+    <bottom>
+        <Button fx:id="btnChange" cache="true" cacheHint="SPEED" contentDisplay="CENTER" focusTraversable="false"
+                maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                mnemonicParsing="false" onAction="#btnChangeOnAction" prefHeight="48.0" prefWidth="48.0"
+                styleClass="button-transparent" BorderPane.alignment="BOTTOM_LEFT">
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0"/>
+            </BorderPane.margin>
+            <graphic>
+                <ImageView cache="true" cacheHint="SPEED" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <Image url="@gfx/design/gear.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+    </bottom>
+</BorderPane>

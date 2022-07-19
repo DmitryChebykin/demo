@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onMouseClicked" onTouchPressed="#onTouchPressed"
+            prefHeight="768.0" prefWidth="1024.0"
+            stylesheets="@styles/design/client-auth.css, @styles/roots/dialogs.css, @styles/design/root.css"
+            xmlns="http://javafx.com/javafx" fx:controller="com.example.demo.controller.IdleController">
+    <center>
+        <BorderPane cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" styleClass="pane-container-green"
+                    BorderPane.alignment="CENTER">
+            <center>
+                <VBox alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="1.7976931348623157E308"
+                      maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+                      prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets left="20.0"/>
+                    </padding>
+                    <Label alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="600.0"
+                           styleClass="label-attention-medium" text="Добро" textFill="WHITE">
+                        <font>
+                            <Font size="70.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets left="10.0" right="10.0" top="5.0"/>
+                        </VBox.margin>
+                    </Label>
+                    <Label alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="693.0"
+                           styleClass="label-attention-medium-bold" text="пожаловать" textFill="WHITE" wrapText="true">
+                        <font>
+                            <Font size="70.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets bottom="10.0"/>
+                        </VBox.margin>
+                    </Label>
+                </VBox>
+            </center>
+            <bottom>
+                <StackPane alignment="TOP_CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+                           maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0"
+                           prefWidth="410.0" styleClass="pane-container-purple-small" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets bottom="-70.0"/>
+                    </BorderPane.margin>
+                    <VBox alignment="CENTER" cache="true" cacheHint="SPEED" prefHeight="203.0" prefWidth="584.0">
+                        <padding>
+                            <Insets bottom="10.0" top="30.0"/>
+                        </padding>
+                        <Label alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+                               maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0"
+                               prefWidth="584.0" styleClass="label-small-bold" text="Отсканируйте товар,"
+                               textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="36.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+                               maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0"
+                               prefWidth="581.0" styleClass="label-small" text="чтобы начать работу"
+                               textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="36.0"/>
+                            </font>
+                            <padding>
+                                <Insets top="-10.0"/>
+                            </padding>
+                        </Label>
+                        <ImageView cache="true" cacheHint="SPEED" fitHeight="56.0" fitWidth="51.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                            <Image url="@/gfx/design/arrow-down.png"/>
+                        </ImageView>
+                    </VBox>
+                </StackPane>
+            </bottom>
+        </BorderPane>
+    </center>
+    <bottom>
+        <Button cache="true" cacheHint="SPEED" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0"
+                maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                mnemonicParsing="false" onAction="#btnSettingsOnAction" prefHeight="48.0" prefWidth="48.0"
+                styleClass="button-transparent" textAlignment="CENTER" BorderPane.alignment="BOTTOM_LEFT">
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0"/>
+            </BorderPane.margin>
+            <graphic>
+                <ImageView cache="true" cacheHint="SPEED" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <Image url="@/gfx/design/gear.png"/>
+                </ImageView>
+            </graphic>
+        </Button>
+    </bottom>
+</BorderPane>

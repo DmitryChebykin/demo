@@ -1,0 +1,8 @@
+@import "root.css";
+
+.lab-message {
+    -fx-font-family: "HelveticaNeue LT CYR 57 Cond";
+    -fx-font-size: 48;
+    -fx-font-weight: bold;
+    -fx-text-fill: -white;
+}

@@ -1,0 +1,18 @@
+.label-input-field {
+    -fx-font-size: 26px;
+}
+
+.button-accept {
+    -fx-effect: dropshadow(one-pass-box, #64b09a, 10, 0, 1, 2);
+    -fx-background-color: radial-gradient(center 50% 50% , radius 60% , #10b5d1, #49d5d4);
+    -fx-background-radius: 30;
+}
+
+.button-denied {
+    -fx-border-color: #10b5d1;
+    -fx-border-width: 4px;
+    -fx-border-radius: 30;
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+    -fx-background-insets: 4;
+}

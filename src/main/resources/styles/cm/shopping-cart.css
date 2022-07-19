@@ -1,0 +1,6 @@
+@import "root.css";
+
+.btn-row{
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+}

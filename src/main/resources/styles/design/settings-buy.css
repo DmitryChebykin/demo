@@ -1,0 +1,39 @@
+.scroll-bar:horizontal .increment-arrow,
+.scroll-bar:horizontal .decrement-arrow,
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow {
+    -fx-pref-height: 30;
+    -fx-pref-width: 30;
+    -fx-background-insets: 5;
+}
+
+.table-view:focused {
+    -fx-background-color: #85ba4b;
+    -fx-background-insets: -1.4, 0, 1;
+    -fx-background-radius: 1.4, 0, 0;
+    -fx-padding: 1;
+}
+
+.table-row-cell:focused,
+.table-row-cell:selected {
+    -fx-background-color: #85ba4b;
+    -fx-fill: black ;
+    -fx-font-weight: bold;
+}
+
+.button-purple {
+    -fx-border-color: #85ba4b;
+    -fx-border-width: 4px;
+    -fx-border-insets: -4;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 18px;
+}

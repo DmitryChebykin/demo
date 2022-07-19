@@ -1,0 +1,33 @@
+@font-face {
+    src: url("../../fonts/Raleway-ExtraBold.ttf");
+}
+
+@font-face {
+    src: url("../../fonts/Raleway-Medium.ttf");
+}
+
+.label-attention-medium {
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 64px;
+}
+
+.label-attention-bold {
+    -fx-font-family: 'Raleway';
+    -fx-font-weight: bold;
+    -fx-font-size: 64px;
+}
+
+.pane-container-white {
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 28px;
+}
+
+.button-green {
+    -fx-background-color: radial-gradient(center 50% 50% , radius 60% , #91d35c, #a1db78);
+    -fx-effect: dropshadow(one-pass-box, #64b09a, 10, 0, 1, 2);
+    -fx-background-radius: 30;
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 28px;
+}

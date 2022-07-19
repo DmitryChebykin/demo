@@ -1,0 +1,83 @@
+@font-face{src:url("../fonts/Raleway-ExtraBold.ttf");}
+@font-face{src:url("../fonts/Raleway-Medium.ttf");}
+@font-face{src:url("../fonts/ProximaNova-Bold.ttf");}
+
+.pane-container-white {
+    -fx-effect: dropshadow(two-pass-box, #64b09a, 14, 0, -1, 1);
+    -fx-background-color: white;
+    -fx-background-radius: 50;
+}
+
+.pane-container-white-small {
+    -fx-effect: dropshadow(two-pass-box, #64b09a, 14, 0, -1, 1);
+    -fx-background-color: white;
+    -fx-background: white;
+    -fx-background-radius: 10;
+}
+
+.pane-container-green-work {
+    -fx-effect: dropshadow(two-pass-box, #64b09a, 14, 0, -1, 1);
+    -fx-background-color: linear-gradient(to bottom right, #95ce4d, #71c0aa);
+    -fx-background-radius: 50;
+}
+
+.button-accept {
+    -fx-effect: dropshadow(one-pass-box, #64b09a, 10, 0, 1, 2);
+    -fx-background-color: radial-gradient(center 50% 50% , radius 60% , #10b5d1, #7ed5d4);
+    -fx-background-radius: 30;
+    -fx-font-family: 'Raleway';
+    -fx-font-weight: bold;
+    -fx-font-size: 32px;
+}
+
+.button-green {
+    -fx-effect: dropshadow(one-pass-box, #64b09a, 10, 0, 1, 2);
+    -fx-background-color: radial-gradient(center 50% 50% , radius 60% , #89c95a, #99d171);
+    -fx-background-radius: 30;
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 24px;
+}
+
+.button-green-excises-scan {
+    -fx-effect: dropshadow(one-pass-box, #64b09a, 10, 0, 1, 2);
+    -fx-background-color: radial-gradient(center 50% 50% , radius 60% , #89c95a, #99d171);
+    -fx-background-radius: 10;
+    -fx-font-family: 'Raleway';
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.label-total-sum {
+    -fx-font-family: 'Proxima Nova Rg';
+    -fx-font-weight: bold;
+    -fx-font-size: 86px;
+}
+
+.label-age-attention {
+    -fx-font-family: 'Proxima Nova Rg';
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.label-excises-scan {
+    -fx-font-family: 'Proxima Nova Rg';
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+
+.scroll-bar:horizontal .increment-arrow,
+.scroll-bar:horizontal .decrement-arrow,
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:horizontal .decrement-button {
+    -fx-padding:0;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow {
+    -fx-pref-height: 12;
+    -fx-pref-width: 24;
+    -fx-background-insets: 0;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: white;
+}

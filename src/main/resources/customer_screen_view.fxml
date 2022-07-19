@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0"
+            stylesheets="@styles/design/work.css" xmlns="http://javafx.com/javafx/8.0.171"
+            fx:controller="com.example.demo.controller.CustomerViewController">
+    <center>
+        <HBox alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity"
+              minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1024.0"
+              BorderPane.alignment="CENTER">
+            <VBox cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="640.0" prefWidth="599.0" spacing="5.0"
+                  styleClass="pane-container-white">
+                <HBox.margin>
+                    <Insets/>
+                </HBox.margin>
+                <padding>
+                    <Insets top="20.0"/>
+                </padding>
+                <Label fx:id="sumText" alignment="CENTER_RIGHT" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+                       maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0"
+                       prefWidth="440.0" styleClass="label-total-sum" text="127.96" textAlignment="RIGHT">
+                    <padding>
+                        <Insets right="20.0"/>
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="82.0"/>
+                    </font>
+                </Label>
+                <Separator cache="true" cacheHint="SPEED" prefHeight="3.0" prefWidth="560.0">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </Separator>
+                <ScrollPane cache="true" cacheHint="SPEED" fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity"
+                            maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0"
+                            prefWidth="543.0">
+                    <VBox.margin>
+                        <Insets left="10.0"/>
+                    </VBox.margin>
+                    <VBox fx:id="checkContainer" cache="true" cacheHint="SPEED" prefHeight="208.0" prefWidth="486.0"
+                          style="-fx-background-color: #ffffff;">
+                        <padding>
+                            <Insets left="5.0" right="25.0" top="5.0"/>
+                        </padding>
+                        <children>
+                            <TableView fx:id="goodListTableView" prefHeight="231.0" prefWidth="511.0" style=": ;"
+                                       stylesheets="@styles/table_view.css">
+                                <columns>
+                                    <TableColumn fx:id="goodListTableColumn" prefWidth="497.0" text="Товары в чеке"/>
+                                </columns>
+                            </TableView>
+                        </children>
+                    </VBox>
+                </ScrollPane>
+            </VBox>
+            <VBox alignment="TOP_CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity"
+                  minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="367.0" spacing="10.0"
+                  styleClass="pane-container-green-work">
+                <padding>
+                    <Insets bottom="5.0"/>
+                </padding>
+                <HBox.margin>
+                    <Insets left="-20.0"/>
+                </HBox.margin>
+                <HBox fx:id="cardBox" alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+                      maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0"
+                      prefWidth="390.0">
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                    <padding>
+                        <Insets top="5.0"/>
+                    </padding>
+                    <ImageView cache="true" cacheHint="SPEED" fitHeight="68.0" fitWidth="68.0" pickOnBounds="true"
+                               preserveRatio="true">
+                        <HBox.margin>
+                            <Insets right="5.0"/>
+                        </HBox.margin>
+                        <Image url="@gfx/design/flat-kopilka.png"/>
+                    </ImageView>
+                    <VBox alignment="CENTER_LEFT" cache="true" cacheHint="SPEED" maxHeight="-Infinity"
+                          maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="86.0"
+                          prefWidth="100.0">
+                        <HBox.margin>
+                            <Insets left="10.0"/>
+                        </HBox.margin>
+                        <Text fx:id="labKopilkaNumber" cache="true" cacheHint="SPEED" fill="WHITE" strokeType="OUTSIDE"
+                              strokeWidth="0.0" text="#123456">
+                            <font>
+                                <Font name="Ubuntu" size="18.0"/>
+                            </font>
+                        </Text>
+                        <HBox cache="true" cacheHint="SPEED" prefHeight="18.0" prefWidth="200.0">
+                            <Text fx:id="labKopilkaBalance" cache="true" cacheHint="SPEED" fill="WHITE"
+                                  strokeType="OUTSIDE" strokeWidth="0.0" text="3.96">
+                                <font>
+                                    <Font name="Ubuntu Bold" size="18.0"/>
+                                </font>
+                                <HBox.margin>
+                                    <Insets right="2.0"/>
+                                </HBox.margin>
+                            </Text>
+                            <Text cache="true" cacheHint="SPEED" fill="WHITE" layoutX="10.0" layoutY="27.0"
+                                  strokeType="OUTSIDE" strokeWidth="0.0" text="бон.">
+                                <font>
+                                    <Font name="Ubuntu" size="18.0"/>
+                                </font>
+                            </Text>
+                        </HBox>
+                        <HBox cache="true" cacheHint="SPEED" prefHeight="18.0" prefWidth="200.0">
+                            <Text fx:id="labKopilkaChips" cache="true" cacheHint="SPEED" fill="WHITE"
+                                  strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                <font>
+                                    <Font name="Ubuntu Bold" size="18.0"/>
+                                </font>
+                                <HBox.margin>
+                                    <Insets right="2.0"/>
+                                </HBox.margin>
+                            </Text>
+                            <Text cache="true" cacheHint="SPEED" fill="WHITE" layoutX="10.0" layoutY="23.0"
+                                  strokeType="OUTSIDE" strokeWidth="0.0" text="фишек">
+                                <font>
+                                    <Font name="Ubuntu" size="18.0"/>
+                                </font>
+                            </Text>
+                        </HBox>
+                    </VBox>
+                </HBox>
+                <Button fx:id="btnWorkflow" alignment="BASELINE_LEFT" cache="true" cacheHint="SPEED"
+                        focusTraversable="false" graphicTextGap="50.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                        minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false"
+                        onAction="#btnWorkflowOnAction" prefHeight="62.0" prefWidth="336.0" styleClass="button-green"
+                        text="Поиск товара" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                    <graphic>
+                        <ImageView cache="true" cacheHint="SPEED" fitHeight="47.0" fitWidth="47.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="@gfx/design/loupe.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="btnQuantity" alignment="BASELINE_LEFT" cache="true" cacheHint="SPEED"
+                        focusTraversable="false" graphicTextGap="50.0" layoutX="35.0" layoutY="145.0"
+                        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                        mnemonicParsing="false" onAction="#btnQuantityOnAction" prefHeight="62.0" prefWidth="343.0"
+                        styleClass="button-green" text="Ввести кол-во" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                    <graphic>
+                        <ImageView cache="true" cacheHint="SPEED" fitHeight="48.0" fitWidth="48.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="@gfx/design/numbers.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="btnBarcode" alignment="BASELINE_LEFT" cache="true" cacheHint="SPEED"
+                        focusTraversable="false" graphicTextGap="50.0" layoutX="80.0" layoutY="111.0"
+                        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                        mnemonicParsing="false" onAction="#btnBarcodeOnAction" prefHeight="62.0" prefWidth="345.0"
+                        styleClass="button-green" text="Ввести штрихкод" textAlignment="CENTER" textFill="WHITE"
+                        wrapText="true">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                    <graphic>
+                        <ImageView cache="true" cacheHint="SPEED" fitHeight="39.0" fitWidth="59.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="@gfx/design/barcode.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <VBox fx:id="prohibitedContainer" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                      minHeight="-Infinity" minWidth="-Infinity" prefHeight="121.0" prefWidth="400.0" spacing="2.0">
+                    <Button fx:id="btnExciseScanInfo" contentDisplay="RIGHT" maxHeight="-Infinity" minHeight="-Infinity"
+                            mnemonicParsing="false" onAction="#btnExciseScanInfoOnAction" prefHeight="22.0"
+                            prefWidth="318.0" styleClass="button-green-excises-scan" text="ОТСКАНИРУЙТЕ АКЦИЗНЫЙ ТОВАР"
+                            textFill="WHITE">
+                        <padding>
+                            <Insets bottom="-10.0" left="-10.0" right="-10.0" top="-10.0"/>
+                        </padding>
+                        <graphic>
+                            <ImageView fitHeight="24.0" fitWidth="24.0" opacity="0.84" pickOnBounds="true"
+                                       preserveRatio="true">
+                                <Image url="@gfx/info.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity"
+                                minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="352.0">
+                        <VBox fx:id="vBoxProhibited" mouseTransparent="true"/>
+                    </ScrollPane>
+                </VBox>
+                <VBox alignment="BOTTOM_CENTER" cache="true" cacheHint="SPEED" maxHeight="1.7976931348623157E308"
+                      maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="163.0"
+                      prefWidth="400.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                    <padding>
+                        <Insets bottom="10.0"/>
+                    </padding>
+                    <Label fx:id="labNeedConfirm" alignment="CENTER" cache="true" cacheHint="SPEED" ellipsisString=""
+                           maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+                           minWidth="-Infinity" prefHeight="54.0" prefWidth="400.0" styleClass="label-age-attention"
+                           text="Требуется подтверждение.&#10;Дождитесь администратора" textAlignment="CENTER"
+                           textFill="WHITE" textOverrun="CLIP">
+                        <font>
+                            <Font name="Ubuntu" size="16.0"/>
+                        </font>
+                    </Label>
+                    <Button fx:id="btnPay" cache="true" cacheHint="SPEED" focusTraversable="false" graphicTextGap="20.0"
+                            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                            mnemonicParsing="false" onAction="#btnPayOnAction" prefHeight="96.0" prefWidth="316.0"
+                            styleClass="button-accept" text="Оплатить" textAlignment="CENTER" textFill="WHITE"
+                            wrapText="true">
+                        <font>
+                            <Font size="42.0"/>
+                        </font>
+                        <graphic>
+                            <ImageView cache="true" cacheHint="SPEED" fitHeight="41.0" fitWidth="49.0"
+                                       pickOnBounds="true" preserveRatio="true">
+                                <Image url="@gfx/design/btn-accept.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </VBox>
+            </VBox>
+        </HBox>
+    </center>
+    <bottom>
+        <Button alignment="CENTER" cache="true" cacheHint="SPEED" maxHeight="-Infinity" maxWidth="-Infinity"
+                minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnSettingsOnAction"
+                prefHeight="48.0" prefWidth="48.0" styleClass="button-transparent" BorderPane.alignment="BOTTOM_LEFT">
+            <graphic>
+                <ImageView cache="true" cacheHint="SPEED" fitHeight="44.0" fitWidth="44.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <Image url="@gfx/design/gear.png"/>
+                </ImageView>
+            </graphic>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0"/>
+            </BorderPane.margin>
+        </Button>
+    </bottom>
+    <padding>
+        <Insets top="40.0"/>
+    </padding>
+</BorderPane>

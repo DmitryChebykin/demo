@@ -1,0 +1,8 @@
+@font-face {
+    src: url("/fonts/Raleway-Medium.ttf");
+}
+
+.label-message {
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 42px;
+}

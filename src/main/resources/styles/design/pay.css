@@ -1,0 +1,53 @@
+@font-face {
+    src: url("/fonts/Raleway-ExtraBold.ttf");
+}
+
+@font-face {
+    src: url("/fonts/Raleway-Medium.ttf");
+}
+
+@font-face {
+    src: url("/fonts/ProximaNova-Bold.ttf");
+}
+
+@font-face {
+    src: url("/fonts/ProximaNova-Light.ttf");
+}
+
+.pane-container-white {
+    -fx-effect: dropshadow(two-pass-box, #64b09a, 14, 0, -1, 1);
+    -fx-background-color: white;
+    -fx-background-radius: 50;
+}
+
+.pane-type-bank {
+    -fx-background-color: linear-gradient(to bottom right, #4bd5c6, #30a5d0);
+    -fx-background-radius: 20;
+}
+
+.pane-type-kopilka {
+    -fx-background-color: linear-gradient(to bottom right, #95ce4d, #71c0aa);
+    -fx-background-radius: 20;
+}
+
+.pane-type-cash {
+    -fx-background-color: linear-gradient(to bottom right, #50bbb9, #8c85da);
+    -fx-background-radius: 20;
+}
+
+.label-header {
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 34px;
+}
+
+.label-sum {
+    -fx-font-family: 'Proxima Nova Rg';
+    -fx-font-weight: bold;
+    -fx-font-size: 82px;
+}
+
+.label-type {
+    -fx-font-family: 'Raleway';
+    -fx-font-weight: bold;
+    -fx-font-size: 34px;
+}

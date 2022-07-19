@@ -1,0 +1,25 @@
+@font-face {
+    src: url("/fonts/Raleway-Medium.ttf");
+}
+
+.label-message {
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 42px;
+}
+
+.label-attention {
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 32px;
+}
+
+.button-confirm {
+    -fx-border-color: #fc815f;
+    -fx-border-width: 4px;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-background-color: linear-gradient(to bottom right, #d47294, #af5fc4);
+    -fx-text-fill: white;
+    -fx-font-family: 'Raleway';
+    -fx-font-size: 32px;
+    -fx-effect: dropshadow(three-pass-box, #8259b7, 30, 0, 0, 10);
+}

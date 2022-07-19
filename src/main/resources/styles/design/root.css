@@ -1,0 +1,58 @@
+/* Корневой стиль */
+.root-pane {
+    -fx-background-color: white;
+}
+
+.pane-container-purple {
+    -fx-background-color: linear-gradient(to bottom right, #fc815f, #8b4df0);
+    -fx-background-radius: 50;
+}
+
+.pane-container-purple2 {
+    -fx-background-color: linear-gradient(to bottom right, #ff885e, #f74a9b);
+    -fx-background-radius: 50;
+}
+
+.pane-container-purple-small {
+    -fx-background-color: linear-gradient(to bottom right, #ff885e, #f74a9b);
+    -fx-background-radius: 20;
+}
+
+.pane-container-green {
+    -fx-background-color: linear-gradient(to bottom right, #95ce4d, #71c0aa);
+    -fx-background-radius: 50;
+}
+
+.pane-container-green-left {
+    -fx-background-color: linear-gradient(to bottom right, #95ce4d, #71c0aa);
+    -fx-background-radius: 50 0 0 50;
+}
+
+.pane-container-blue {
+    -fx-background-color: linear-gradient(to bottom right, #4bd5c6, #30a5d0);
+    -fx-background-radius: 50;
+}
+
+.pane-container-blue-small {
+    -fx-background-color: linear-gradient(to bottom right, #4bd5c6, #30a5d0);
+    -fx-background-radius: 20;
+}
+
+.button-transparent {
+    -fx-background-color: transparent;
+}
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #95ce4d;
+}
+
+.pane-simple-white {
+    -fx-border-color: e5e5e5;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-alignment: center;
+}

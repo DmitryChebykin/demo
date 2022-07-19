@@ -1,0 +1,51 @@
+@import "colors.css";
+
+@font-face {
+    src: url("/fonts/Arial.ttf");
+}
+
+@font-face {
+    src: url("/fonts/HelveticaNeueCyr-Bold.ttf");
+}
+
+@font-face {
+    src: url("/fonts/HelveticaNeueLTCyrillic57Cond.ttf");
+}
+
+@font-face {
+    src: url("/fonts/HelveticaNeueLTCyrillic57Cond-Bold.ttf");
+}
+
+.root {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: -black;
+}
+
+.btn {
+    -fx-background-color: -cream;
+    -fx-background-radius: 5;
+    -fx-text-fill: -black;
+    -fx-font-family: 'HelveticaNeue LT CYR 57 Cond';
+}
+
+.btn-action {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+}
+
+.lbl-email {
+    -fx-background-color: -cream;
+    -fx-background-radius: 5;
+    -fx-text-fill: -black;
+}
+
+.text-field {
+    -fx-background-color: -cream;
+    -fx-background-radius: 5;
+    -fx-text-fill: -black;
+}
+
+.scroll-pane, .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
